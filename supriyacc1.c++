@@ -34,7 +34,7 @@ void solve()
         }
         if(f==0)cout<<"Yes";
         cout<<endl;
-    }   
+    }
 }
  
  
