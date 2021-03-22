@@ -23,7 +23,7 @@ int main() {
     cout << "Enter the number you wan to check whether prime or not";
     int n;
     cin >> n;
-    cout << "result = " << isPrime(n);
-    cout << "result = " << isPrime1(n);
+    cout << "result = " << isPrime(n) << endl;
+    cout << "result = " << isPrime1(n) << endl;
     return 0;
 }

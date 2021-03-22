@@ -3,20 +3,20 @@ using namespace std;
 
 class details{
     public:
-        char name[50];
+        string name;
+        string address;
         int age;
         float salary;
-        int phoneNo;
     
     void getData() {
         cout << "Enter name" << endl;
-        cin >> name;
+        getline(cin, name);
+        cout << "Enter address" << endl;
+        getline(cin, address);
         cout << "Enter age" << endl;
         cin >> age;
         cout << "Enter salary" << endl;
         cin >> salary;
-        cout << "Enter phoneNo" << endl;
-        cin >> phoneNo;
     }
     void showdata();
 };
@@ -24,9 +24,9 @@ class details{
 void details :: showdata(){
     cout << "details of employee \n";
     cout << "name: " << name << endl;
+    cout << "address: " << address << endl;
     cout << "age: " << age << endl;
     cout << "salary: " << salary << endl;
-    cout << "phoneNo: " << phoneNo << endl;
 }
 
 int main(){
