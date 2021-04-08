@@ -1,42 +1,37 @@
 #include <iostream>
 using namespace std;
 
-class Test
-{
-private:
-    int x, y, z;
+class threeNumbers {
+    private:
+        int x, y, z;
+        
+    public:
+        void input() {
+           cout << "Enter three numbers: ";
+           cin >> x >> y >> z;
+        }
 
-public:
-    void input()
-    {
-        cout << "Enter three numbers:";
-        cin >> x >> y >> z;
-    }
-
-    friend void find(Test t);
+        friend void findLargest(threeNumbers t);
 };
 
-void find(Test t)
+void findLargest(threeNumbers t)
 {
-    if (t.x > t.y && t.x > t.z)
-    {
+    if (t.x > t.y && t.x > t.z) {
         cout << "Largest is:" << t.x;
     }
-    else if (t.y > t.z)
-    {
+    else if (t.y > t.z) {
         cout << "Largest is:" << t.y;
     }
-    else
-    {
+    else {
         cout << "Largest is:" << t.z;
     }
 }
 
 int main()
 {
-    Test t;
-    t.input();
+    threeNumbers t;
 
-    find(t);
+    t.input();
+    findLargest(t);
     return 0;
 }
