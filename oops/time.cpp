@@ -35,5 +35,16 @@ int main(){
     t1.putTime();
     t2.putTime();
     t3.putTime();
+    int hour1, minute1, second1, hour2, minute2, second2;
+    cout << "Time - 1 \n Enter Hour, minute and second " << endl;
+    cin >> hour1 >> minute1 >> second1;
+    cout << "Time - 2 \n Enter Hour, minute and second " << endl;
+    cin >> hour2 >> minute2 >> second2;
+    t1.getTime(hour1, minute1, second1);
+    t2.getTime(hour2, minute2, second2);
+    t3.sum(t1, t2);
+    t1.putTime();
+    t2.putTime();
+    t3.putTime();
     return 0;
 }
