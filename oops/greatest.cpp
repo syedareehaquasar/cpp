@@ -1,48 +1,41 @@
 #include <iostream>
 using namespace std;
 
-// forward declaration
 class ClassB;
 
-class ClassA
-{
+class ClassA {
+    private:
+        int numA;
+        friend int greatest(ClassA, ClassB);
 
-public:
-    // constructor to initialize numA to 12
-    ClassA() : numA(12) {}
-
-private:
-    int numA;
-
-    // friend function declaration
-    friend int greatest(ClassA, ClassB);
+    public:
+        void input() {
+            cout << "Enter number for class A:";
+            cin >> numA;
+        }
 };
 
-class ClassB
-{
-
-public:
-    // constructor to initialize numB to 1
-    ClassB() : numB(1) {}
-
-private:
-    int numB;
-
-    // friend function declaration
-    friend int greatest(ClassA, ClassB);
+class ClassB {
+    private:
+        int numB;
+        friend int greatest(ClassA, ClassB);
+    
+    public:
+        void input() {
+            cout << "Enter number for class B:";
+            cin >> numB;
+        }
 };
 
-// access members of both classes
-int greatest(ClassA objectA, ClassB objectB)
-{
-
+int greatest(ClassA objectA, ClassB objectB) {
     return max(objectA.numA, objectB.numB);
 }
 
-int main()
-{
+int main() {
     ClassA objectA;
     ClassB objectB;
+    objectA.input();
+    objectB.input();
     cout << "Greatest: " << greatest(objectA, objectB);
     return 0;
 }

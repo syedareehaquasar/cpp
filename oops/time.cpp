@@ -6,18 +6,18 @@ class times
 
     int seconds, minutes, hours;
 
-public:
-    void getTime(int h, int m, int s)
-    {
-        hours = h;
-        minutes = m;
-        seconds = s;
-    }
-    void putTime()
-    {
-        cout << "The time is " << hours << " hours " << minutes << " minutes " << seconds << " seconds\n";
-    }
-    void sum(times, times);
+    public:
+        void getTime(int h, int m, int s) {
+            hours = h;
+            minutes = m;
+            seconds = s;
+        }
+
+        void putTime() {
+            cout << "The time is " << hours << " hours " << minutes << " minutes " << seconds << " seconds\n";
+        }
+        
+        void sum(times, times);
 };
 
 void times::sum(times t1, times t2)
