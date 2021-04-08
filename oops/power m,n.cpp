@@ -1,23 +1,18 @@
 #include <iostream>
-
 using namespace std;
 
-float power(double base, int powr = 0)
-{
-    if (powr == 0)
-    {
+float power(double base, int powr = 0){
+    if (powr == 0) {
         return base * base;
     }
     float res = 1;
-    for (int i = 0; i < powr; ++i)
-    {
+    for (int i = 0; i < powr; ++i) {
         res *= base;
     }
     return res;
 }
 
-int main()
-{
+int main(){
     int powr;
     double base;
     cout << "Enter the number whose power you want to calculate:- " << endl;
