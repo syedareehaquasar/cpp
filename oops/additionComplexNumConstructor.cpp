@@ -24,16 +24,34 @@ class Complex{
 };
 
 int main(){
-    // complex num 1
-    Complex C1(3, 2);
+    // // complex num 1
+    // Complex C1(3, 2);
+    // cout << "Complex number 1 : " << C1.real << " + " << C1.imaginary << "i" <<endl;
+
+    // // complex Num 2
+    // Complex C2(9, 5);
+    // cout << "Complex number 2 : " << C2.real << " + " << C2.imaginary << "i" << endl;
+
+    // Complex C3;
+    // C3 = C3.addComp(C1, C2);
+
+    // cout << "Sum of complex number : " << C3.real << " + " << C3.imaginary << "i" << endl;
+
+    int c1, r1, c2, r2;
+    cout << "Enter real and imaginary parts of first complex no. " << endl;
+    cin >> c1 >> r1;
+    cout << "Enter real and imaginary parts of second complex no. " << endl;
+    cin >> c2 >> r2;
+    Complex C1(c1, r1);
     cout << "Complex number 1 : " << C1.real << " + " << C1.imaginary << "i" <<endl;
 
     // complex Num 2
-    Complex C2(9, 5);
+    Complex C2(c2, r2);
     cout << "Complex number 2 : " << C2.real << " + " << C2.imaginary << "i" << endl;
 
     Complex C3;
     C3 = C3.addComp(C1, C2);
 
     cout << "Sum of complex number : " << C3.real << " + " << C3.imaginary << "i" << endl;
+
 }
